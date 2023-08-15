@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 #ifndef LINKEDLIST_H
-#define LINKDLIST_H
+#define LINKEDLIST_H
+
 // struct responsible for the linked list
 /*--------------------------------------*/
-// struct responsável pela lista encadeada
+// struct responsï¿½vel pela lista encadeada
 typedef struct linkedList
 {
     // dado a ser inserido
@@ -29,7 +30,7 @@ void startList(node** list);
 // verifica se a lista esta vazia
 /*-----------------------------*/
 // verifies if the list is empty
-int emptyList(node* list);
+int isEmpty(node* list);
 
 // insere de acordo com o indice
 /*----------------------------*/

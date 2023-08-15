@@ -3,12 +3,11 @@
 #include <locale.h>
 #include "linkedList.h"
 
-// protótipos
+// prototipos
 /*---------*/
 // prototypes
 void menu(node* list);
 void userMenu(node* list);
-
 
 int main(void)
 {
@@ -63,28 +62,28 @@ void userMenu(node* list)
 
             if (!insertInIndex(&list, element, index)) printf("\n\tNao foi possível concluir a operação\n");
 
-            return menu(list);
+            break;
         case 2:
             printf("\tIsira o índice: ");
             scanf("%d", &index);
 
             if (!removeInIndex(&list, index)) printf("\n\tNao foi possível concluir a operação\n");
 
-            return menu(list);
+            break;
         case 3:
             printf("\tInsira o elemento que voce deseja remover: ");
             scanf("%d", &element);
 
             if (!insertInIndex(&list, element, index)) printf("\n\tNao foi possível concluir a operação\n");
 
-            return menu(list);
+            break;
         case 4:
             if (lenLinkedList(list) == 0)
             {
                 printf ("\tA lista ainda está vazia!\n");
             } else printf("\tO tamanho da lista ?: %d\n", lenLinkedList(list));
 
-            return menu(list);
+            break;
         case 5:
             printf("\tInsira o elemeto a ser consultado: ");
             scanf("%d", &element);
@@ -96,7 +95,7 @@ void userMenu(node* list)
                 printf("\n\tElemento não encontrado!\n");
             } else printf("\n\tO índice do elemento %d ? %d\n", element, index);
 
-            return menu(list);
+            break;
         case 6:
             printf("\tIsira o índice a ser consultado: ");
             scanf("%d", &index);
@@ -108,32 +107,32 @@ void userMenu(node* list)
                 printf("\n\tO índice não foi encontrado\n");
             } else printf("\n\tO elemento no índice %d ? %d\n", index, element);
 
-            return menu(list);
+            break;
         case 7:
             printf("\n\tDesculpe, eu não consigo fazer isso por você...\n");
             printf("\tMas você pode tentar manualmente usando a função equalList\n");
-            return menu(list);
+            break;
         case 8:
             printf("\n\tDesculpe, eu não consigo fazer isso por você...\n");
             printf("\tMas você pode tentar manualmente usando a função listCpy\n");
-            return menu(list);
+            break;
         case 9:
             if (!fullToEmpty(&list))
             {
                 printf("\n\tA lista j? está vazia\n");
             } else printf("\n\tLista esvaziada com sucesso\n");
 
-            return menu(list);
+            break;
         case 10:
             printf("\t");
             printList(list);
 
-            return menu(list);
+            break;
         case 11:
-            printf("%s", emptyList(list) ? "\n\tSim, a lista está vazia\n" : "\n\tnão, a lista não está vazia\n");
+            printf("%s", isEmpty(list) ? "\n\tSim, a lista está vazia\n" : "\n\tnão, a lista não está vazia\n");
         default:
             printf("\n\tOpção invalida\n");
 
-            return menu(list);
+        return menu(list);
     }
 }

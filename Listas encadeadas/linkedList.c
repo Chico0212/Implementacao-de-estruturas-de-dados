@@ -10,7 +10,7 @@ void startList(node** list)
     *list = NULL;
 }
 
-int emptyList(node* list)
+int isEmpty(node* list)
 {
     // verifica se a lista esta vazia
     /*-----------------------------*/
@@ -43,7 +43,7 @@ int insertInIndex(node** list, int data, int index)
     /*-------------------------------------------------------------*/
     // Checks if the list is empty and if the index is zero
     // because if it is empty the only way to insert eh in the beginning
-    if (emptyList(*list) && index != 0) return 0;
+    if (isEmpty(*list) && index != 0) return 0;
 
     // verifica se o indice eh possivel
     /*--------------------------------*/
@@ -231,7 +231,7 @@ int removeInIndex(node** list, int index)
     /*--------------------------------------------*/
     // If the list is empty and the index is not 0
     // Returns 0
-    if (emptyList(*list) && index != 0) return 0;
+    if (isEmpty(*list) && index != 0) return 0;
 
     // se o indice for maior que o possivel
     // retorna 0
@@ -416,7 +416,7 @@ int fullToEmpty(node** list)
     // se a lista estiver vazia retorna 0
     /*--------------------------------*/
     // If the list is empty returns 0
-    if (emptyList(*list)) return 0;
+    if (isEmpty(*list)) return 0;
 
     // enquanto a lista nao for nula
     /*---------------------------*/
@@ -442,7 +442,7 @@ int listCpy(node** source, node** destination)
     /*-----------------------------*/
     // If the destination is not empty
     // it will be emptied
-    if (!emptyList(*destination)) fullToEmpty(destination);
+    if (!isEmpty(*destination)) fullToEmpty(destination);
 
     // enquanto a atribuicao for possivel
     /*---------------------------------*/

@@ -8,23 +8,23 @@
 
 ```c
 /*======DISPOSICAO DE VALORES======*/
-/**
- *  se (valor < valorAtualDoNo)
- *  {
- *      esquerda = valor;
- *  } caso contrario {
- *      direita = valor;
- * }
- * 
- * =====================================
- * 
- * if (valor >= actualNodeValue)
- * {
- *      left = valor;
- * } else {
- *      right = valor;
- * }
- */
+
+ if (valor < valorAtualDoNo)
+ {
+     esquerda = valor;
+ } else {
+     direita = valor;
+}
+
+/*=====================================*/
+
+if (valor >= actualNodeValue)
+{
+     left = valor;
+} else {
+     right = valor;
+}
+
 /*=======VALUES DISPOSITION=======*/
 ```
 

@@ -65,7 +65,7 @@ int insertInIndex(node** list, int data, int index)
 
     // verifica se a lista esta vazia e se o indice eh zero
     // pois se ela estiver vazia o unico jeito de inserir eh no incio
-    if (emptyList(*list) && index != 0) return 0;
+    if (isEmpty(*list) && index != 0) return 0;
 
     // verifica se o indice eh possivel
     if (index > lenLinkedList(*list)) return 0;
@@ -131,7 +131,7 @@ int insertInIndex(node** list, int data, int index)
         
             // se a lista estiver vazia e o indice nao for 0
             // retorna 0
-            if (emptyList(*list) && index != 0) return 0;
+            if (isEmpty(*list) && index != 0) return 0;
         
             // se o indice for maior que o possivel
             // retorna 0
